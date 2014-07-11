@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-knuth-lib
 Version:	20140216
-Release:	2
+Release:	3
 Summary:	A small library of MetaFont sources
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/systems/knuth/dist/lib

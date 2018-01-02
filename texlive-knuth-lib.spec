@@ -1,12 +1,6 @@
-# revision 33039
-# category Package
-# catalog-ctan /systems/knuth/dist/lib
-# catalog-date 2014-02-16 23:23:15 +0100
-# catalog-license knuth
-# catalog-version undef
 Name:		texlive-knuth-lib
-Version:	20140216
-Release:	5
+Version:	20170414
+Release:	1
 Summary:	A small library of MetaFont sources
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/systems/knuth/dist/lib
@@ -32,11 +26,10 @@ MetaPost.
 
 #-----------------------------------------------------------------------
 %files
-%{_texmfdistdir}/fonts/source/public/knuth-lib/grayf.mf
-%{_texmfdistdir}/fonts/source/public/knuth-lib/manfnt.mf
-%{_texmfdistdir}/fonts/source/public/knuth-lib/slant.mf
-%{_texmfdistdir}/fonts/tfm/public/knuth-lib/manfnt.tfm
-%{_texmfdistdir}/tex/generic/knuth-lib/null.tex
+%{_texmfdistdir}/fonts/source/public/knuth-lib
+%{_texmfdistdir}/fonts/tfm/public/knuth-lib
+%{_texmfdistdir}/tex/generic/knuth-lib
+%{_texmfdistdir}/tex/plain/knuth-lib
 
 #-----------------------------------------------------------------------
 %prep

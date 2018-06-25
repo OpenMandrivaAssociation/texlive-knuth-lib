@@ -1,5 +1,5 @@
 Name:		texlive-knuth-lib
-Version:	20170414
+Version:	20180303
 Release:	1
 Summary:	A small library of MetaFont sources
 Group:		Publishing

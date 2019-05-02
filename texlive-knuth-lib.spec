@@ -1,6 +1,6 @@
 Name:		texlive-knuth-lib
-Version:	20180303
-Release:	2
+Version:	20190228
+Release:	1
 Summary:	A small library of MetaFont sources
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/systems/knuth/dist/lib

@@ -1,11 +1,11 @@
 Name:		texlive-knuth-lib
-Version:	20190228
+Version:	57963
 Release:	1
 Summary:	A small library of MetaFont sources
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/systems/knuth/dist/lib
 License:	KNUTH
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/knuth-lib.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/knuth-lib.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -17,12 +17,12 @@ means to generate the logo font that is used for MetaFont and
 MetaPost.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -33,7 +33,7 @@ MetaPost.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0
+%autosetup -p1 -c
 
 %build
 

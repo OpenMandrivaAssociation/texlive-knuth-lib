@@ -3,7 +3,7 @@ Version:	57963
 Release:	2
 Summary:	A small library of MetaFont sources
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/systems/knuth/dist/lib
+URL:		https://www.ctan.org/tex-archive/systems/knuth/dist/lib
 License:	KNUTH
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/knuth-lib.r%{version}.tar.xz
 BuildArch:	noarch

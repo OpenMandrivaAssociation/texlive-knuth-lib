@@ -1,42 +1,20 @@
-Name:		texlive-knuth-lib
-Version:	57963
-Release:	2
-Summary:	A small library of MetaFont sources
+%global tl_name knuth-lib
+%global tl_revision 57963
+
+Name:		texlive-%{tl_name}
+Version:	%{tl_revision}
+Release:	1
+Summary:	Core TeX and Metafont sources from Knuth
 Group:		Publishing
 URL:		https://www.ctan.org/tex-archive/systems/knuth/dist/lib
-License:	KNUTH
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/knuth-lib.r%{version}.tar.xz
+License:	knuth
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/knuth-lib.r%{tl_revision}.tar.xz
 BuildArch:	noarch
-BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+BuildSystem:	texlive
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-A collection of miscellaneous MetaFont source, including the
-means to generate the logo font that is used for MetaFont and
-MetaPost.
+A collection of core TeX and Metafont macro files from DEK, apart from
+the plain format and base. Includes the MF logo font(s), webmac.tex,
+etc.
 
-%post
-%{_sbindir}/texlive.post
-
-%postun
-if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-fi
-
-#-----------------------------------------------------------------------
-%files
-%{_texmfdistdir}/fonts/source/public/knuth-lib
-%{_texmfdistdir}/fonts/tfm/public/knuth-lib
-%{_texmfdistdir}/tex/generic/knuth-lib
-%{_texmfdistdir}/tex/plain/knuth-lib
-
-#-----------------------------------------------------------------------
-%prep
-%autosetup -p1 -c
-
-%build
-
-%install
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar fonts tex %{buildroot}%{_texmfdistdir}
